@@ -21,7 +21,9 @@ streamlit run streamlit/app.py                           # http://localhost:8501
 # B) Final app (Flask API + React)
 cd frontend && npm install && npm run build && cd ..     # builds frontend/dist
 python -m backend.app                                    # http://localhost:5000  (serves API + React)
-#   dev mode with hot reload:  python -m backend.app   and   cd frontend && npm run dev  (http://localhost:5173)
+#   dev mode with hot reload:  python -m backend.app  
+cd frontend 
+npm run dev  (http://localhost:5173)
 
 python -m engine.visualize_model_accuracy                # standalone: PNG graphs -> data/results/plots/
 ```
