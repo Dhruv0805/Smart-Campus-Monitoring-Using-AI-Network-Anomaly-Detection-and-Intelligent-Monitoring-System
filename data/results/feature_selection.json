@@ -1,0 +1,51 @@
+[
+  {
+    "method": "infogain",
+    "k": 20,
+    "accuracy": 0.6816,
+    "macro_f1": 0.6619,
+    "binary_anomaly_f1": 0.9441
+  },
+  {
+    "method": "infogain",
+    "k": 40,
+    "accuracy": 0.684,
+    "macro_f1": 0.6634,
+    "binary_anomaly_f1": 0.947
+  },
+  {
+    "method": "importance",
+    "k": 20,
+    "accuracy": 0.6884,
+    "macro_f1": 0.6695,
+    "binary_anomaly_f1": 0.9433
+  },
+  {
+    "method": "importance",
+    "k": 40,
+    "accuracy": 0.6824,
+    "macro_f1": 0.6632,
+    "binary_anomaly_f1": 0.9477
+  },
+  {
+    "method": "relieff",
+    "k": 20,
+    "accuracy": 0.6852,
+    "macro_f1": 0.6666,
+    "binary_anomaly_f1": 0.9439
+  },
+  {
+    "method": "relieff",
+    "k": 40,
+    "accuracy": 0.6822,
+    "macro_f1": 0.6617,
+    "binary_anomaly_f1": 0.9473
+  },
+  {
+    "method": "none",
+    "k": 105,
+    "accuracy": 0.6826,
+    "macro_f1": 0.6649,
+    "binary_anomaly_f1": 0.9494
+  }
+]

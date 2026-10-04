@@ -1,0 +1,16 @@
+Live simulator -> engine detection (60s attack, zone=services, 3 seeds averaged); tick-level
+attack       int  flagged%  correct-class%  detect-lag(s)  top risk
+tcp-syn      1.0     99.4%           88.1%            1.3  HIGH
+tcp-syn      0.6     98.9%           44.1%            1.7  HIGH
+udp-flood    1.0     97.2%           89.8%            2.7  CRITICAL
+udp-flood    0.6     85.9%           76.8%            9.7  CRITICAL
+icmp-echo    1.0    100.0%           92.7%            1.0  HIGH
+icmp-echo    0.6     98.9%           29.9%            1.7  CRITICAL
+httpFlood    1.0    100.0%           98.3%            1.0  CRITICAL
+httpFlood    0.6    100.0%           55.4%            1.0  CRITICAL
+slowloris    1.0     65.5%           62.1%            5.0  MEDIUM
+slowloris    0.6     42.9%           40.7%            5.3  LOW
+slowpost     1.0      9.0%            0.0%           38.3  LOW
+slowpost     0.6     18.6%            0.0%           39.7  LOW
+bruteForce   1.0    100.0%          100.0%            1.0  CRITICAL
+bruteForce   0.6     96.0%           29.4%            1.0  CRITICAL

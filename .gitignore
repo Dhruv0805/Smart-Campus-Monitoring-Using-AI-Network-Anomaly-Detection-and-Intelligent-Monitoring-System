@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+frontend/node_modules/
+data/results/run_log.txt
+.DS_Store

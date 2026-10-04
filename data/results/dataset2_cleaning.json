@@ -1,0 +1,13 @@
+{
+  "before_rows": 40262,
+  "imputed_cells": 0,
+  "constant_removed": [
+    "etherStatsFragments",
+    "etherStatsOversizePkts",
+    "etherStatsUndersizePkts",
+    "ifInErrors",
+    "ifInUnknownProtos",
+    "ifOutErrors"
+  ],
+  "after_rows": 40262
+}

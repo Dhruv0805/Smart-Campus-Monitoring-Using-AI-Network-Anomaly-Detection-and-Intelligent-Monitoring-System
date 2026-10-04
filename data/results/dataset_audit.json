@@ -1,0 +1,51 @@
+{
+  "dataset1_all_data": {
+    "rows": 4998,
+    "features": 34,
+    "missing_values": 0,
+    "duplicate_rows": 0,
+    "constant_features": [],
+    "negative_values": 0,
+    "non_numeric_features": [],
+    "inf_values": 0,
+    "class_counts": {
+      "tcp-syn": 960,
+      "slowloris": 780,
+      "udp-flood": 773,
+      "icmp-echo": 632,
+      "normal": 600,
+      "httpFlood": 573,
+      "slowpost": 480,
+      "bruteForce": 200
+    },
+    "imbalance_ratio": 4.8
+  },
+  "dataset2_local_A_D": {
+    "rows": 40262,
+    "features": 22,
+    "missing_values": 0,
+    "duplicate_rows": 0,
+    "constant_features": [
+      "etherStatsFragments",
+      "etherStatsOversizePkts",
+      "etherStatsUndersizePkts",
+      "ifInErrors",
+      "ifInUnknownProtos",
+      "ifOutErrors"
+    ],
+    "negative_values": 0,
+    "non_numeric_features": [],
+    "inf_values": 0,
+    "class_counts": {
+      "normal": 36902,
+      "sign_d": 484,
+      "sign_a": 480,
+      "sign_b": 480,
+      "sign_c": 480,
+      "sign_f": 480,
+      "sign_g": 480,
+      "sign_e": 476
+    },
+    "imbalance_ratio": 77.52521008403362
+  }
+}

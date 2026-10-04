@@ -1,0 +1,208 @@
+{
+  "model": "HGB regularised",
+  "thresholds": {
+    "bruteForce": 0.037059623107655267,
+    "httpFlood": 0.032020930504588846,
+    "icmp-echo": 0.1182990510797379,
+    "slowloris": 0.7576682658942574,
+    "slowpost": 0.9124125203571883,
+    "tcp-syn": 0.11947823674006004,
+    "udp-flood": 0.0961360923911047
+  },
+  "metrics_at_thresholds": {
+    "accuracy": 0.6319791875125075,
+    "macro_precision": 0.618470887192486,
+    "macro_recall": 0.6156007987889625,
+    "macro_f1": 0.5767831057900973,
+    "weighted_f1": 0.601123409970339,
+    "binary_anomaly_f1": 0.9145226191927813,
+    "binary_anomaly_recall": 0.8526603001364257,
+    "false_alarm_rate": 0.08848080133555926,
+    "per_class": {
+      "bruteForce": {
+        "precision": 0.51171875,
+        "recall": 0.655,
+        "f1": 0.5745614035087719,
+        "support": 200
+      },
+      "httpFlood": {
+        "precision": 0.7506887052341598,
+        "recall": 0.9511343804537522,
+        "f1": 0.8391070053887606,
+        "support": 573
+      },
+      "icmp-echo": {
+        "precision": 0.7335092348284961,
+        "recall": 0.439873417721519,
+        "f1": 0.5499505440158259,
+        "support": 632
+      },
+      "normal": {
+        "precision": 0.457286432160804,
+        "recall": 0.9115191986644408,
+        "f1": 0.6090351366424986,
+        "support": 599
+      },
+      "slowloris": {
+        "precision": 0.8168724279835391,
+        "recall": 0.5089743589743589,
+        "f1": 0.627172195892575,
+        "support": 780
+      },
+      "slowpost": {
+        "precision": 0.3548387096774194,
+        "recall": 0.022916666666666665,
+        "f1": 0.043052837573385516,
+        "support": 480
+      },
+      "tcp-syn": {
+        "precision": 0.6089527027027027,
+        "recall": 0.7510416666666667,
+        "f1": 0.6725746268656716,
+        "support": 960
+      },
+      "udp-flood": {
+        "precision": 0.7139001349527665,
+        "recall": 0.684346701164295,
+        "f1": 0.6988110964332893,
+        "support": 773
+      }
+    },
+    "labels": [
+      "bruteForce",
+      "httpFlood",
+      "icmp-echo",
+      "normal",
+      "slowloris",
+      "slowpost",
+      "tcp-syn",
+      "udp-flood"
+    ],
+    "confusion_matrix": [
+      [
+        131,
+        54,
+        0,
+        0,
+        1,
+        0,
+        1,
+        13
+      ],
+      [
+        27,
+        545,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        5,
+        73,
+        278,
+        1,
+        0,
+        0,
+        234,
+        41
+      ],
+      [
+        5,
+        8,
+        9,
+        546,
+        9,
+        10,
+        4,
+        8
+      ],
+      [
+        10,
+        4,
+        2,
+        321,
+        397,
+        10,
+        6,
+        30
+      ],
+      [
+        45,
+        5,
+        3,
+        325,
+        79,
+        11,
+        5,
+        7
+      ],
+      [
+        28,
+        35,
+        64,
+        0,
+        0,
+        0,
+        721,
+        112
+      ],
+      [
+        5,
+        2,
+        23,
+        1,
+        0,
+        0,
+        213,
+        529
+      ]
+    ]
+  },
+  "sweep": [
+    {
+      "scale": 0.25,
+      "false_alarm_rate": 0.7529,
+      "binary_anomaly_recall": 0.9891,
+      "macro_f1": 0.5746
+    },
+    {
+      "scale": 0.5,
+      "false_alarm_rate": 0.6394,
+      "binary_anomaly_recall": 0.9657,
+      "macro_f1": 0.5789
+    },
+    {
+      "scale": 0.75,
+      "false_alarm_rate": 0.3289,
+      "binary_anomaly_recall": 0.915,
+      "macro_f1": 0.5984
+    },
+    {
+      "scale": 1,
+      "false_alarm_rate": 0.0885,
+      "binary_anomaly_recall": 0.8527,
+      "macro_f1": 0.5768
+    },
+    {
+      "scale": 1.5,
+      "false_alarm_rate": 0.0301,
+      "binary_anomaly_recall": 0.7287,
+      "macro_f1": 0.4853
+    },
+    {
+      "scale": 2,
+      "false_alarm_rate": 0.0217,
+      "binary_anomaly_recall": 0.7217,
+      "macro_f1": 0.4885
+    },
+    {
+      "scale": 3,
+      "false_alarm_rate": 0.0184,
+      "binary_anomaly_recall": 0.7133,
+      "macro_f1": 0.4901
+    }
+  ]
+}

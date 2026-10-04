@@ -1,0 +1,30 @@
+experiment,dataset,features,protocol,accuracy,macro_precision,macro_recall,macro_f1,weighted_f1,binary_anomaly_f1,binary_anomaly_recall,false_alarm_rate
+BASELINE RandomForest [all34],ds1,raw cumulative,stratified 10-fold (paper),1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0
+BASELINE RandomForest [infogain20],ds1,raw cumulative,stratified 10-fold (paper),0.9998,0.9998,0.9998,0.9998,0.9998,1.0,1.0,0.0
+BASELINE J48 (C4.5-like) [all34],ds1,raw cumulative,stratified 10-fold (paper),0.9992,0.9993,0.9992,0.9992,0.9992,0.9999,1.0,0.0017
+BASELINE J48 (C4.5-like) [infogain20],ds1,raw cumulative,stratified 10-fold (paper),0.9992,0.9992,0.9993,0.9992,0.9992,0.9999,1.0,0.0017
+BASELINE REPTree (pruned) [all34],ds1,raw cumulative,stratified 10-fold (paper),0.9994,0.9995,0.9993,0.9994,0.9994,0.9999,1.0,0.0017
+BASELINE REPTree (pruned) [infogain20],ds1,raw cumulative,stratified 10-fold (paper),0.9994,0.9995,0.9994,0.9994,0.9994,0.9999,1.0,0.0017
+BASELINE RandomForest [all34],ds1,raw cumulative,blocked 5-fold (honest),0.9138,0.9039,0.8928,0.896,0.9137,0.9946,1.0,0.08
+BASELINE J48 (C4.5-like) [all34],ds1,raw cumulative,blocked 5-fold (honest),0.7639,0.7763,0.7444,0.7565,0.7623,0.9753,0.9782,0.2033
+BASELINE REPTree (pruned) [all34],ds1,raw cumulative,blocked 5-fold (honest),0.7639,0.7763,0.7444,0.7565,0.7623,0.9753,0.9782,0.2033
+"IMPROVED DecisionTree [delta+window, 105 feat]",ds1,delta+window,blocked 5-fold + embargo (honest),0.5892,0.5514,0.5416,0.5407,0.5864,0.9342,0.9477,0.596
+"IMPROVED RandomForest [delta+window, 105 feat]",ds1,delta+window,blocked 5-fold + embargo (honest),0.623,0.6432,0.5765,0.5836,0.6153,0.943,0.9668,0.6144
+"IMPROVED ExtraTrees [delta+window, 105 feat]",ds1,delta+window,blocked 5-fold + embargo (honest),0.6292,0.668,0.6178,0.6274,0.6248,0.9426,0.9686,0.6361
+"IMPROVED GradientBoosting(Hist) [delta+window, 105 feat]",ds1,delta+window,blocked 5-fold + embargo (honest),0.6826,0.696,0.6574,0.6649,0.6777,0.9494,0.9668,0.5125
+"IMPROVED HGB tuned [delta+window, 105 feat]",ds1,delta+window,blocked 5-fold + embargo (honest),0.6828,0.6967,0.6575,0.665,0.6777,0.9493,0.9668,0.5142
+DIAGNOSTIC row index only (no traffic features),ds1,row index,blocked 5-fold (no embargo),0.9126,0.9075,0.9166,0.9081,0.9129,0.983,0.9886,0.1667
+"DIAGNOSTIC raw RF, test counters offset +-0.5 sd",ds1,raw cumulative,"blocked 5-fold, shifted test",0.6855,0.7185,0.698,0.6844,0.6839,0.9713,0.993,0.3783
+DEPLOY HGB tuned + per-class thresholds (FAR budget 10%),ds1,delta+window,blocked 5-fold + embargo (honest),0.6684,0.6709,0.6413,0.6422,0.6603,0.9318,0.915,0.3589
+DEPLOY HGB regularised + per-class thresholds (FAR budget 10%),ds1,delta+window,blocked 5-fold + embargo (honest),0.632,0.6185,0.6156,0.5768,0.6011,0.9145,0.8527,0.0885
+DEPLOY ExtraTrees + per-class thresholds (FAR budget 10%),ds1,delta+window,blocked 5-fold + embargo (honest),0.4545,0.4858,0.4511,0.3843,0.4044,0.8528,0.7528,0.0935
+BASELINE RandomForest [raw16],ds2,raw 16,stratified 10-fold (paper),0.9997,1.0,0.9972,0.9985,0.9997,0.9984,0.9967,0.0
+BASELINE RandomForest [raw16],ds2,raw 16,leave-one-capture-out (honest),0.9995,0.9974,0.9969,0.9971,0.9995,0.9967,0.9964,0.0003
+BASELINE J48 (C4.5-like) [raw16],ds2,raw 16,stratified 10-fold (paper),0.9996,0.9976,0.9974,0.9975,0.9996,0.9975,0.9973,0.0002
+BASELINE J48 (C4.5-like) [raw16],ds2,raw 16,leave-one-capture-out (honest),0.9962,0.9724,0.9913,0.9808,0.9963,0.9777,0.9911,0.0033
+BASELINE REPTree (pruned) [raw16],ds2,raw 16,stratified 10-fold (paper),0.9992,0.9963,0.9937,0.995,0.9992,0.9955,0.994,0.0003
+BASELINE REPTree (pruned) [raw16],ds2,raw 16,leave-one-capture-out (honest),0.9942,0.958,0.9601,0.9542,0.9943,0.9838,0.9923,0.0023
+IMPROVED DecisionTree [derived+log],ds2,log + derived,leave-one-capture-out (honest),0.9951,0.9715,0.9762,0.9728,0.9951,0.9718,0.9759,0.003
+IMPROVED RandomForest [derived+log],ds2,log + derived,leave-one-capture-out (honest),0.9997,1.0,0.9971,0.9985,0.9997,0.9984,0.9967,0.0
+IMPROVED ExtraTrees [derived+log],ds2,log + derived,leave-one-capture-out (honest),0.9997,1.0,0.9966,0.9983,0.9997,0.9981,0.9961,0.0
+IMPROVED GradientBoosting(Hist) [derived+log],ds2,log + derived,leave-one-capture-out (honest),0.9962,0.9879,0.9656,0.9747,0.996,0.9806,0.9679,0.0006
