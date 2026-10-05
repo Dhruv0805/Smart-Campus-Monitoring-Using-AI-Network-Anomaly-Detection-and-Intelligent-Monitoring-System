@@ -19,9 +19,9 @@ class SimulationConfig:
     tick_seconds: float = 1.0          # simulated seconds per poll (also the wall-clock sleep when live)
     running: bool = True
     random_anomalies: bool = True
-    random_mean_gap_s: float = 40.0    # mean seconds between random anomalies (Poisson process)
-    random_duration_s: tuple = (10, 25)
-    random_intensity: tuple = (0.6, 1.0)
+    random_mean_gap_s: float = 120.0    # mean seconds between random anomalies (Poisson process)
+    random_duration_s: tuple = (20, 45)
+    random_intensity: tuple = (0.7, 1.0)
     zone_jitter: float = 0.04          # +-4% per-zone traffic load jitter
     seed: int | None = None
     history_points: int = 600          # per-zone points kept for charts
